@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6dl6i4dietyh"]
+
+[ext_resource type="Texture2D" uid="uid://clci55yia3087" path="res://acorn-1.png" id="1_v8jqv"]
+[ext_resource type="Script" uid="uid://2cwson3jxxfy" path="res://Player/Acron.gd" id="1_vvw5e"]
+
+[sub_resource type="Animation" id="Animation_inwu4"]
+resource_name = "bouncing"
+step = 0.333
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_srlcf"]
+_data = {
+&"bouncing": SubResource("Animation_inwu4")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vvw5e"]
+radius = 8.0
+
+[node name="AcronThePlayer" type="CharacterBody2D"]
+script = ExtResource("1_vvw5e")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_v8jqv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_srlcf")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.64, 0.8)
+shape = SubResource("CircleShape2D_vvw5e")

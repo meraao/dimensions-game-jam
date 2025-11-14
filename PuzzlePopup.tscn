@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwvk0ag6ktelg"]
+
+[ext_resource type="Script" uid="uid://bn3n8ve61qf8u" path="res://PuzzlePopup.gd" id="1_i0pi6"]
+
+[node name="PuzzlePopup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i0pi6")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LetterGrid" type="GridContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FoundWordsLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WordPreview" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ClaimButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+disabled = true
