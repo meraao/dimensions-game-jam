@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg673j3eh82yg"]
+
+[ext_resource type="Texture2D" uid="uid://b2yglx77v3oyg" path="res://rope.png" id="1_eua4g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3t0n"]
+size = Vector2(33, 25.25)
+
+[node name="rope 2D" type="Area2D"]
+
+[node name="rope" type="Sprite2D" parent="."]
+position = Vector2(-1, 1)
+scale = Vector2(0.622222, 0.633333)
+texture = ExtResource("1_eua4g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 12.625)
+shape = SubResource("RectangleShape2D_w3t0n")
