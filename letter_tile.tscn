@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd5kxl371sbh8"]
+
+[ext_resource type="Script" uid="uid://dodv8r3idf8u" path="res://LetterTile.gd" id="1_o2b0x"]
+
+[node name="LetterTile" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_o2b0x")
+
+[node name="background" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="letter text" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
