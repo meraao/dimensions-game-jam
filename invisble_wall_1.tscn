@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo5p2s1lnonma"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0jyh6"]
+
+[node name="invisble wall 1" type="Sprite2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+rotation = -1.57299
+shape = SubResource("WorldBoundaryShape2D_0jyh6")
